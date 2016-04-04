@@ -1,0 +1,198 @@
+@charset "utf-8";
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.container {
+	height: auto;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 0 0 5px #888;
+}
+.header {
+	background-color: #DAEAEF;
+	height: 150px;
+}
+.logo {
+	background-image: url(../images/daiict_logo_3.png);
+	background-repeat: no-repeat;
+	height: 140px;
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 700px;
+	float: left;
+}
+.menu, .footer {
+	background-color: #183152;
+	height: 40px;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #000;
+}
+.menu {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.menu ul {
+	padding: 0px;
+	margin: 0px;
+	color: #FFF;
+}
+.menu ul li {
+	display: inline;
+}
+.menu ul li a {
+	padding: 10px;
+	height: 20px;
+	float: left;
+	color: #FFF;
+	text-decoration: none;
+}
+.menu ul li a:hover, .menu ul li .active {
+	color: #000;
+	background-color: #F5F5F5;
+	border-right-width: thin;
+	border-right-style: solid;
+	border-right-color: #000;
+}
+.content {
+	background-color: #F5F5F5;
+	padding: 10px;
+	text-align: justify;
+}
+.Info {
+	background-image: url(../images/mscitregistration.png);
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+	height: 140px;
+	width: 285px;
+}
+.footer {
+	text-align: center;
+	height: 30px;
+	padding-top: 10px;
+	color: #FFF;
+	clear: left;
+}
+.column {
+	float: left;
+	width: 350px;
+	margin: 5px;
+}
+.row {
+	clear: both;
+	height: 30px;
+}
+input {
+	border: thin solid #CCC;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+	font-size: inherit;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+input:hover, select:hover {
+	border: thin solid #999;
+}
+input:focus, input:active, select:focus, select:active {
+	border: thin solid #39F;
+}
+select {
+	padding-left: 5px;
+	border: thin solid #CCC;
+	color: #555;
+	font-size: inherit;
+	margin: 0;
+	width: 200px;
+}
+.rowHeader {
+	background-color: #183152;
+	color: #FFF;
+	float: left;
+	height: 20px;
+	text-align:center;
+	padding:10px;
+}
+.rowHeader-condensed {
+	background-color: #183152;
+	color: #FFF;
+	float: left;
+	height: 20px;
+	text-align:center;
+	padding: 5px;
+}
+.rowColumn {
+	float: left;
+	height: 30px;
+	padding: 10px;
+}
+.rowColumn-condensed {
+	float: left;
+	height: 20px;
+	padding:5px;
+	font-size: 14px;
+}
+.rowColumn-condensed a {
+text-decoration:none;
+}
+.error {
+	float: left;
+	margin-top: 9px;
+	color: #C00;
+}
+.sideMenu {
+	float: left;
+	width: 175px;
+	background-color: #183152;
+	color: #FFF;
+	margin-right:10px;
+	padding-top:10px;
+		padding-bottom:10px;
+}
+.sideMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.sideMenu ul li a {
+	display: block;
+	color: #FFFFFF;
+	background-color: #183152;
+	width: 160px;
+	padding:5px;
+	padding-left:10px;
+	text-decoration: none;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color:#FFF;
+
+}
+.sideMenu ul li a:hover, .sideMenu ul li .active {
+	color: #000;
+	background-color: #F5F5F5;
+	background-color: #F5F5F5;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #000;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+}
+.activeCityCentre {
+	border-radius:25px;
+	background-color: #183152;
+	color:#FFF;
+}
+fieldset {   
+  -moz-border-radius:5px;  
+  border-radius: 5px;  
+  -webkit-border-radius: 5px;
+}
+.result {
+	background-color: #dff0d8;
+	color: #468847;
+	border: thin solid #50AC6A;
+	padding:5px;
+}

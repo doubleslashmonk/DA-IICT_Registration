@@ -1,0 +1,165 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@taglib prefix="s" uri="/struts-tags"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DA-IICT M.Sc.IT Registration</title>
+<link rel="shortcut icon" type='image/png' href="images/icon.png"/>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo"></div>
+			<div class="Info"></div>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="Registration">Registration</a></li>
+				<li><a href="CandidateLogin" class="active">Status</a></li>
+				<s:if test="%{#session.ActorName!=null}">
+					<li style="float: right;"><a href="ActorLogout">Logout</a></li>
+					<li style="float: right;"><a href="AdminPanel"><s:property
+								value="#session.ActorName"></s:property></a></li>
+				</s:if>
+			</ul>
+		</div>
+		<div class="content" style="text-align: left">
+			<h1>Check your Registration Status</h1>
+			<hr />
+			<form action="LoginAction" method="post">
+				<fieldset>
+					<legend>Login Details</legend>
+					<div class="row">
+						<div class="column">
+							<label for="RegistrationId">Registration ID<span
+								style="color: #C00">*</span></label>
+						</div>
+						<div class="column">
+							<s:textfield name="RegistrationId" />
+						</div>
+						<s:fielderror>
+							<s:param>RegistrationId</s:param>
+						</s:fielderror>
+					</div>
+					<div class="row">
+						<div class="column">
+							<label>Date of Birth <span style="color: #C00">*</span></label>
+						</div>
+						<div class="column">
+							<select name="DOBDate" style="width: 100px">
+								<option value="0">Date</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select> <select name="DOBMonth" style="width: 100px">
+								<option value="0">Month</option>
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</select> <select name="DOBYear" style="width: 100px">
+								<option value="0">Year</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1952">1952</option>
+								<option value="1951">1951</option>
+								<option value="1950">1950</option>
+							</select>
+						</div>
+						<s:fielderror>
+							<s:param>DOBDate</s:param>
+						</s:fielderror>
+					</div>
+				</fieldset>
+				<div style="padding-left: 500px">
+					<input type="submit" value="Log In" />
+				</div>
+			</form>
+		</div>
+		<div class="footer">&copy; 2013 DA-IICT, Gandhinagar.</div>
+	</div>
+</body>
+</html>

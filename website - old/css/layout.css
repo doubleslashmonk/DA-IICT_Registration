@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.container {
+	height: auto;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 0 0 5px #888;
+}
+.header {
+	background-color: #DAEAEF;
+	height: 150px;
+}
+.logo {
+	background-image: url(../images/daiict_logo_3.png);
+	background-repeat: no-repeat;
+	height: 140px;
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 700px;
+	float: left;
+}
+.menu, .footer {
+	background-color: #183152;
+	height: 40px;
+border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #000;
+	
+}
+.menu {	
+	padding-left:10px;
+}
+ul {
+	padding:0px;
+	margin:0px;
+	color: #FFF;
+}
+ul li {
+	display:inline;
+}
+ul li a {
+	padding:10px;
+	height:20px;
+	float: left;
+	color: #FFF;
+	text-decoration:none;
+}
+ul li a:hover, .active {
+	color:#000;
+	background-color:#F5F5F5;
+	border-right-width: thin;
+	border-right-style: solid;
+	border-right-color: #000;
+}
+.content {
+	background-color: #F5F5F5;
+	padding: 10px;
+	text-align: justify;
+}
+.Info {
+	background-image: url(../images/mscitregistration.png);
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	margin-right: 5px;
+	float:left;
+	height:140px;
+	width:285px;
+}
+.footer {
+	text-align:center;
+	height:30px;
+	padding-top:10px;
+	color:#FFF;
+}
+.column {
+	float: left;
+	width:350px;
+	margin:5px;
+}
+.row {
+	clear: both;
+	
+}
+input {
+	border: thin solid #CCC;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+	font-size:inherit;
+	padding-left:5px;
+	padding-right:5px;
+	
+}
+input:hover, select:hover {
+	border: thin solid #999;
+}
+input:focus, input:active, select:focus, select:active {
+	border: thin solid #39F;
+}
+select {
+	padding-left: 5px;
+	border: thin solid #CCC;
+	color: #555;
+  	font-size: inherit;
+  	margin: 0;
+	width:200px;
+}
+.rowHeader {
+	background-color: #183152;
+	color:#FFF;
+	float: left;
+	height: 20px;
+	padding-right: 120px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.rowColumn {
+	float: left;
+	height: 30px;
+	padding-right: 13px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	
+}

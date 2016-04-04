@@ -1,0 +1,136 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- Configuration for the default package. -->
+	<constant name="struts.multipart.saveDir" value="/home/kunjan/Desktop" />
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="default" extends="struts-default">
+		<action name="Registration" class="">
+			<result>registration.jsp</result>
+		</action>
+		 <action name="Status" class="action.LoginAction">
+			<result name="success">status.jsp</result>
+			<result name="error" type="redirect">CandidateLogin</result>
+		</action>
+		 <action name="Logout" class="action.LoginAction" method="logout">
+			<result type="redirect">CandidateLogin</result>
+		</action>
+		<action name="CandidateLogin" class="">
+			<result>candidate_login.jsp</result>
+		</action>
+		  <action name="AdminLogin" class="">
+			<result>admin_login.jsp</result>
+		</action>
+		<action name="Supervisor" class="action.ActorLogin" method="checkRole">
+			<result name="supervisor" type="redirect">City</result>
+			<result name="login" type="redirect">AdminLogin</result>
+			<result name="coordinator" type="redirect">AdminLogin</result>
+		</action>
+		 <action name="RegisterAction" class="action.RegisterAction"
+			method="RegisterUser">
+			<result name="success">registration_success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/registration.jsp</result>
+		</action>
+		<action name="LoginAction" class="action.LoginAction" method="login">
+			<result name="success" type="redirect">Status</result>
+			<result name="error">error.jsp</result>
+			<result name="input">candidate_login.jsp</result>
+		</action>
+		<action name="ViewProfileAction" class="action.ViewProfileAction"
+			method="viewProfile">
+			<result name="success">profile.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		 <action name="EmailActivation" class="action.EmailActivation">
+			<result name="success">email_activation_success.jsp</result>
+			<result name="error">email_activation_fail.jsp</result>
+		</action>
+		<action name="ActorLogin" class="action.ActorLogin" method="login">
+			<result name="supervisor" type="redirect">Supervisor</result>
+			<result name="coordinator" type="redirect">Coordinator</result>
+			<result name="input" type="redirect">AdminLogin</result>
+		</action>
+		<action name="ChangePassword" class="action.ActorLogin" method="checkRole">
+			<result name="supervisor">supervisor_change_password.jsp</result>
+			<result name="coordinator">coordinator_change_password.jsp</result>
+			<result name="login" type="redirect">AdminLogin</result>
+		</action>
+		<action name="UpdatePassword" class="action.ChangePassword" method="changepassword">
+			<result name="success" type="redirect">ChangePassword</result>
+			<result name="input" type="chain">ChangePassword</result>
+		</action>
+		 <action name="ActorLogout" class="action.ActorLogin" method="logout">
+		<result type="redirect">AdminLogin</result>
+		</action>
+		<action name="AdminPanel" class="action.ActorLogin" method="checkRole">
+		<result name="supervisor" type="redirect">Supervisor</result>
+		<result name="coordinator" type="redirect">Coordinator</result>
+		<result name="login" type="redirect">AdminLogin</result>
+		</action>
+		<action name="City" class="action.CityAction" method="viewCity">
+		<result name="success">supervisor_city.jsp</result>
+		<result name="input">supervisor_city.jsp</result>
+		<result name="login" type="redirect">AdminLogin</result>
+		</action>
+		<action name="DeleteCity" class="action.CityAction" method="deleteCity">
+		<result name="success" type="redirect">City</result>
+		<result name="input">supervisor_city.jsp</result>
+		</action>
+		<action name="EditCity" class="action.CityAction" method="editCity">
+		<result name="success">supervisor_city.jsp</result>
+		<result name="input">supervisor_city.jsp</result>
+		</action>
+		<action name="CityAction" class="action.CityAction">
+			<result type="redirect">City</result>
+			<result name="input" type="redirect">City</result>
+		</action>
+		<action name="CentreAction" class="action.CentreAction" method="addCentre">
+			<result type="redirect">Centre</result>
+		</action> 
+		<action name="CentreAction" class="action.CentreAction" method="updateCentre">
+			<result type="redirect">Centre</result>
+		</action>
+		  <action name="Centre" class="action.CentreAction" method="allCentre">
+			<result >supervisor_centre.jsp</result>
+			<result name="login" type="redirect">AdminLogin</result>
+		</action>
+		<action name="NewCentre">
+		<result>supervisor_centre_add.jsp</result>
+		</action>
+		<action name="DeleteCentre" class="action.CentreAction" method="deleteCentre">
+			<result name="success" type="redirect">Centre</result>
+			<result name="login" type="redirect">AdminLogin</result>
+		</action>
+		<action name="ViewCentre" class="action.CentreAction" method="viewCentre">
+			<result name="error" type="redirect">Centre</result>
+			<result name="login" type="redirect">AdminLogin</result>
+			<result name="success">supervisor_centre_view.jsp</result>	
+		</action>
+		<action name="EditCentre" class="action.CentreAction" method="editCentre">
+			<result name="error" type="redirect">Centre</result>
+			<result>supervisor_centre_add.jsp</result>
+			<result name="login" type="redirect">AdminLogin</result>
+		</action>
+		<action name="Resend" class="action.LoginAction" method="resend">
+			<result name="input">email_activation_fail.jsp</result>
+			<result name="success" type="redirect">Status</result>
+		</action>
+		<action name="Coordinator" class="action.ActorLogin" method="checkRole">
+			<result name="supervisor" type="redirect">AdminLogin</result>
+			<result name="login">admin_login.jsp</result>
+			<result name="coordinator">coordinator_home.jsp</result>	
+		</action>
+		 <action name="StudentDetail" class="action.VerifyCandidate" method="getCandateDetail">
+			<result name="success">coordinator_student_view.jsp</result>
+			<result name="error" type="redirect">Coordinator</result>
+		</action>
+		<action name="DDApprove" class="action.VerifyCandidate" method="demandApprove">
+			<result name="success" type="redirect">Coordinator</result>
+			<result name="error" type="redirect">Coordinator</result>
+		</action>
+	</package>
+	
+</struts>

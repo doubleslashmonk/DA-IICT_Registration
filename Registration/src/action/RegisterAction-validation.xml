@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="StudentName">
+		<field-validator type="requiredstring">
+			<message>Name is Required</message>
+		</field-validator>
+	</field>
+	<field name="StudentGuardianName">
+		<field-validator type="requiredstring">
+			<message>Guardian Name is Required</message>
+		</field-validator>
+	</field>
+	<field name="ContactPersonName">
+		<field-validator type="requiredstring">
+			<message>Contact Person is Required</message>
+		</field-validator>
+	</field>
+	<field name="StudentAddressLine1">
+		<field-validator type="requiredstring" >
+			<message>Address Line 1 is Required</message>
+		</field-validator>
+	</field>
+	<field name="StudentCity">
+		<field-validator type="requiredstring">
+			<message>City is Required</message>
+		</field-validator>
+	</field>
+	<field name="StudentEmailAddress">
+		<field-validator type="requiredstring">
+			<message>Email Address is Required</message>
+		</field-validator>
+	</field>
+	
+	<field name="BankName">
+		<field-validator type="requiredstring">
+			<message>Bank Name is Required</message>
+		</field-validator>
+	</field>
+	<field name="BankBranch">
+		<field-validator type="requiredstring">
+			<message>Bank Branch is Required</message>
+		</field-validator>
+	</field>
+<!--  	<field name="DemandDraftNumber">
+		<field-validator type="requiredstring">
+		<message>Demand Draft Number is Required</message>
+		</field-validator>
+	</field>
+	<field name="StudentPostalCode">
+		<field-validator type="requiredstring">
+		<message>Postal Code is Required</message>
+		</field-validator>
+	</field>
+	<field name="STDCode">
+		<field-validator type="requiredstring">
+		<message>STD Code is Required</message>
+		</field-validator>
+	</field>	
+	<field name="PhoneNumber">
+		<field-validator type="requiredstring">
+		<message>Phone Number is Required</message>
+		</field-validator>
+	</field>	
+	<field name="MobileNumber">
+		<field-validator type="requiredstring">
+		<message>Mobile Number is Required</message>
+		</field-validator>
+	</field>	
+	<field name="DOBDate">
+		<field-validator type="requiredstring">
+		<message>DOB is Required</message>
+		</field-validator>
+	</field>
+	<field name="DOBMonth">
+		<field-validator type="requiredstring">
+		<message>Month is Required</message>
+		</field-validator>
+	</field>
+	<field name="DOBYear">
+		<field-validator type="requiredstring">
+		<message>Year is Required</message>
+		</field-validator>
+	</field>
+	<field name="DDDate">
+		<field-validator type="requiredstring">
+		<message>Demand Date is Required</message>
+		</field-validator>
+	</field>
+	<field name="DDMonth">
+		<field-validator type="requiredstring">
+		<message>Month is Required</message>
+		</field-validator>
+	</field>
+	<field name="DDYear">
+		<field-validator type="requiredstring">
+		<message>Year is Required</message>
+		</field-validator>
+	</field>
+	<field name="CityPreference1">
+		<field-validator type="requiredstring">
+		<message>Preference 1 is Required</message>
+		</field-validator>
+	</field>
+	<field name="CityPreference2">
+		<field-validator type="requiredstring">
+		<message>Preference 2 is Required</message>
+		</field-validator>
+	</field>
+	<field name="CityPreference3">
+		<field-validator type="requiredstring">
+		<message>Preference 3 is Required</message>
+		</field-validator>
+	</field>
+	<field name="uploadFileName">
+		<field-validator type="requiredstring">
+		<message>Photograph is Required</message>
+		</field-validator>
+	</field>-->
+</validators>
